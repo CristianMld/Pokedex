@@ -47,36 +47,31 @@ const Pokemons = () => {
   // console.log(numbers);
 
   return (
-    <div className="welcome-page-with-pokemons">
-      <h1>Welcome {userName}!</h1>
-      <p>Here you can find all your favorites pokemons :D</p>
-      <div>
-        <input 
-          type="text" 
-          placeholder="Search pokemon"
-          value={pokemonName}
-          onChange={e => setPokemonName(e.target.value) } 
-        />
-        <button onClick={searchPokemon}>Search</button>
-        <br />
-        <label htmlFor="select">Select a pokemon type: </label>
-        <select onChange={filterType} name="select" id="">
-          {types.map(type => (
-            <option 
-            key={type.url} 
-            value={type.url}
-            >
-              {type.name}
-            </option>
-          ))}
-        </select>
-      </div>
-      <div className="pokemon-card">
-        {paginatedPokemons.map(pokemon => (
-          <PokemonCard 
-          key={pokemon.url ? pokemon.url : pokemon.pokemon.url} 
-          url={pokemon.url ? pokemon.url : pokemon.pokemon.url}/>
-        ))}
+    <div>
+      <div className="welcome-page-with-pokemons">
+        <h1>Welcome {userName}!</h1>
+        <p>Here you can find all your favorites pokemons :D</p>
+        <div>
+          <input 
+            type="text" 
+            placeholder="Search pokemon"
+            value={pokemonName}
+            onChange={e => setPokemonName(e.target.value) } 
+          />
+          <button onClick={searchPokemon}>Search</button>
+          <br />
+          <label htmlFor="select">Select a pokemon type: </label>
+          <select onChange={filterType} name="select" id="">
+            {types.map(type => (
+              <option 
+              key={type.url} 
+              value={type.url}
+              >
+                {type.name}
+              </option>
+            ))}
+          </select>
+        </div>
       </div>
 
       <div className="pagination">
@@ -89,6 +84,14 @@ const Pokemons = () => {
           ))}
           <button onClick={() => setPage(page+1)} 
           disabled={page === totalPages}>Next page</button>
+      </div>
+
+      <div className="pokemon-card">
+        {paginatedPokemons.map(pokemon => (
+          <PokemonCard 
+          key={pokemon.url ? pokemon.url : pokemon.pokemon.url} 
+          url={pokemon.url ? pokemon.url : pokemon.pokemon.url}/>
+        ))}
       </div>
     </div>
   );
