@@ -123,6 +123,18 @@ select {
     column-gap: 10px;
     row-gap: 20px;
   }
+
+  .detail-img {
+    width: 70%;
+  }
+
+  .detail-h1 {
+    width: 100%;
+  }
+
+  .card-info {
+    width: 100%;
+  }
 }
 
 @media (max-width: 480px) {

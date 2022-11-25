@@ -19,7 +19,7 @@ const PokemonCard = () => {
   return (
     <div className="pokemon-detail">
       <h1 className="detail-h1">{pokemon.name?.toUpperCase()}</h1>
-      <img src={pokemon.sprites?.other.dream_world.front_default} alt="" />
+      <img className="detail-img" src={pokemon.sprites?.other.dream_world.front_default} alt="" />
       <div className="card-info">
         <h2>Type: {pokemon.types?.[0].type.name}</h2>
         <h2>Height: {pokemon.height}</h2>
