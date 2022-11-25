@@ -142,4 +142,14 @@ select {
     grid-template-columns: 1fr;
     margin: 30px;
   }
+
+  .detail-h1 {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .card-info {
+    width: 100%;
+    font-size: 12px;
+  }
 }
