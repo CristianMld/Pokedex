@@ -4,7 +4,6 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import PokemonCard from "./PokemonCard";
 
-
 const Pokemons = () => {
 
   const userName = useSelector(state => state.name)
